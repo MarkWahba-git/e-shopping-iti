@@ -5,7 +5,7 @@ class CreateProducts < ActiveRecord::Migration[6.0]
       t.text :description
       t.blob :image
       t.float :price
-      t.float :in-stock
+      t.float :instock
       t.string :category
       t.string :brand
 
