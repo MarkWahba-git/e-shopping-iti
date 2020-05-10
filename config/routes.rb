@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-  resources :posts
+  resources :products
   post 'auth/register' , to: 'users#register'
   post 'auth/login' , to: 'users#login'
   get 'muhammed' , to: 'users#muhammed'
