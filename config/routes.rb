@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   namespace :v1 do
     resources :categories
     resources :brands
+    resources :products
     resources :stores
     resources :orders do
       resources :line_items
