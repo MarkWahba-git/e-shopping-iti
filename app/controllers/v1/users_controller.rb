@@ -12,7 +12,7 @@ class V1::UsersController < ApplicationController
   end
   
   def create
-    @user = User.new(brand_params)
+    @user = User.new(user_params)
     if @user.save
       render json: {status: 'SUCCESS', message: 'user saved', data:@user} , status: :ok
     else
@@ -43,6 +43,6 @@ class V1::UsersController < ApplicationController
   private
 
   def user_params 
-    params.require(:user).permit(:name)
+    params.require(:user).permit(:name,:email,:age,:city,:address,:is_Admin,:is_seller,:is_buyer,:is_guest)
   end
 end

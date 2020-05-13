@@ -12,7 +12,7 @@ class V1::ProductsController < ApplicationController
   end
   
   def create
-    @product = Product.new(brand_params)
+    @product = Product.new(product_params)
     if @product.save
       render json: {status: 'SUCCESS', message: 'product saved', data:@product} , status: :ok
     else
@@ -43,6 +43,6 @@ class V1::ProductsController < ApplicationController
   private
 
   def product_params 
-    params.require(:product).permit(:title)
+    params.require(:product).permit(:title,:description,:image,:price,:instock,:category,:brand)
   end
 end

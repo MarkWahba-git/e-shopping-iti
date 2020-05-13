@@ -15,6 +15,7 @@ class UsersController < ApplicationController
      def login
        authenticate params[:email], params[:password]
      end
+
      def muhammed
        render json: {
              message: 'You have passed  '
