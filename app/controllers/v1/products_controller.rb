@@ -30,7 +30,7 @@ class V1::ProductsController < ApplicationController
     # puts "***************************************"
     # puts params[:random]
     @product = Product.where(id: params[:id]).first
-    if @product.update_attributes(brand_params)
+    if @product.update_attributes(product_params)
       render json: {status: 'SUCCESS', message: 'product updated', data:@product} , status: :ok
     else
       render json: {status: 'ERROR', message: 'Cannot save product', data:@product.errors} , status: :unprocessable_entity
@@ -42,7 +42,7 @@ class V1::ProductsController < ApplicationController
 
   private
 
-  def brand_params 
-    params.require(:product).permit(:brand_name)
+  def product_params 
+    params.require(:product).permit(:title)
   end
 end

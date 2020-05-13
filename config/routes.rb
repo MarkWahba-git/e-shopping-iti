@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     resources :categories
     resources :brands
     resources :products
+    resources :users
     resources :stores
     resources :orders do
       resources :line_items
