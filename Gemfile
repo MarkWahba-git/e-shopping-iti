@@ -8,7 +8,7 @@ gem 'rails', '~> 6.0.2', '>= 6.0.2.2'
 # Use mysql as the database for Active Record
 gem 'mysql2', '>= 0.4.4'
 # Use Puma as the app server
-gem 'puma', '~> 4.1'
+gem 'puma', '~> 4.3'
 
 gem 'jwt'
 gem 'rack-cors', '~> 1.0', '>= 1.0.2'
